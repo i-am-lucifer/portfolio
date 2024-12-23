@@ -1,33 +1,26 @@
 .hero {
-    background-image: url('images/data-hero.jpg');
     background-size: cover;
     background-position: center;
-    padding: 80px 20px;
+    color: white;
     text-align: center;
-    height: 100vh;
+    padding: 100px 20px;
 }
-
-.hero-content {
-    position: relative;
-    top: -50px; /* Moves content upward */
-    color: black;
-}
-
 .hero-content h1 {
     font-size: 3rem;
-    color: black; /* Changes the text color to black */
-    margin: 0;
 }
-
-.social-icons img {
-    background-color: white; /* Adds visibility for icons */
-    border-radius: 50%;
-    padding: 5px;
-    margin: 0 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 10px 0 20px;
 }
-
-.social-icons img:hover {
-    transform: scale(1.1); /* Slight zoom effect on hover */
+.project-grid {
+    display: flex;
+    gap: 20px;
+}
+.project-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
