@@ -1,7 +1,7 @@
 .hero {
     background-size: cover;
     background-position: center;
-    color: white;
+    color: black;
     text-align: center;
     padding: 100px 20px;
 }
@@ -12,6 +12,18 @@
     font-size: 1.2rem;
     margin: 10px 0 20px;
 }
+.social-icons img {
+    background-color: white; /* Adds visibility for icons */
+    border-radius: 50%;
+    padding: 5px;
+    margin: 0 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+.social-icons img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
 .project-grid {
     display: flex;
     gap: 20px;
