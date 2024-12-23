@@ -2,52 +2,67 @@
     background-image: url('images/data-hero.jpg');
     background-size: cover;
     background-position: center;
-    height: 600px; /* Stretch image height */
+    height: 600px; /* Adjust height to accommodate content */
     text-align: center;
     position: relative;
 }
 
 .hero-content {
     position: absolute;
-    top: 50%; /* Vertically center content */
+    top: 50%; /* Center the content vertically */
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* Ensures proper centering */
     color: black;
     text-align: center;
 }
 
 .hero-content h1 {
-    font-size: 2.5rem; /* Adjust font size */
+    font-size: 2.5rem; /* Adjusted font size */
     margin: 0;
     color: black;
 }
 
 .hero-content p {
     margin: 10px 0;
+    font-size: 1.2rem; /* Slightly larger tagline */
 }
 
+.hero-content a.btn {
+    display: inline-block;
+    margin: 20px 0 10px; /* Space between button and icons */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.hero-content a.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Social Icons Styling */
 .social-icons {
-    margin-top: 20px;
+    margin-top: 20px; /* Add space above the icons */
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    justify-content: center; /* Centers the icons horizontally */
+    gap: 15px; /* Space between each icon */
 }
 
 .social-icons img {
-    background-color: white;
-    border-radius: 50%;
+    background-color: white; /* Adds a white background */
+    border-radius: 50%; /* Circular icons */
     padding: 5px;
-    width: 40px;
+    width: 40px; /* Icon size */
     height: 40px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for visibility */
+    transition: transform 0.2s; /* Smooth hover effect */
 }
 
 .social-icons img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Slight zoom on hover */
 }
-
-
 
 .project-grid {
     display: flex;
