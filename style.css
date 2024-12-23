@@ -9,7 +9,7 @@
 
 .hero-content {
     position: relative;
-    top: -100px; /* Moves content upward */
+    top: -50px; /* Moves content upward */
     color: black;
 }
 
