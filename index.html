@@ -166,5 +166,26 @@
     <footer>
         <p>&copy; 2024 Logeshwaran Inbaraj. All rights reserved.</p>
     </footer>
+<script>
+    let currentIndex = 0;
+
+    function slideImages() {
+        const slider = document.querySelector(".slider");
+        const images = document.querySelectorAll(".slider img");
+        const totalImages = images.length;
+
+        // Calculate the new position
+        currentIndex = (currentIndex + 1) % totalImages;
+        const offset = -currentIndex * 100;
+
+        // Apply the transform to the slider
+        slider.style.transform = `translateX(${offset}%)`;
+    }
+
+    // Set the interval for the slide effect
+    setInterval(slideImages, 3000); // Change every 3 seconds
+</script>
+
+    
 </body>
 </html>
