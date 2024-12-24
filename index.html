@@ -175,42 +175,32 @@
     <footer>
         <p>&copy; 2024 Logeshwaran Inbaraj. All rights reserved.</p>
     </footer>
-<script>
+
+    <script>
     let currentIndex = 0;
 
-    function initializeSlider() {
+    function showImage(index) {
         const slider = document.querySelector(".slider");
         const images = document.querySelectorAll(".slider img");
         const totalImages = images.length;
 
-        // Set the slider width to accommodate all images
-        slider.style.width = `${totalImages * 100}%`;
+        // Update the index to loop properly
+        currentIndex = (index + totalImages) % totalImages;
 
-        // Set each image's width to fit within its portion of the slider
-        images.forEach((image) => {
-            image.style.width = `${100 / totalImages}%`;
-        });
-    }
-
-    function slideImages() {
-        const slider = document.querySelector(".slider");
-        const images = document.querySelectorAll(".slider img");
-        const totalImages = images.length;
-
-        // Move to the next image
-        currentIndex = (currentIndex + 1) % totalImages;
-
-        // Apply the transform to slide to the next image
+        // Move the slider to show the correct image
         const offset = -currentIndex * 100;
         slider.style.transform = `translateX(${offset}%)`;
     }
 
-    // Initialize the slider
-    initializeSlider();
+    function nextImage() {
+        showImage(currentIndex + 1);
+    }
 
-    // Set up the interval for automatic sliding
-    setInterval(slideImages, 3000); // Change every 3 seconds
+    function previousImage() {
+        showImage(currentIndex - 1);
+    }
 </script>
+
 
 
 
