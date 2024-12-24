@@ -108,8 +108,42 @@
 .slider img {
     flex-shrink: 0; /* Prevent images from shrinking */
     object-fit: cover; /* Ensure images cover their space */
-    border-radius: 50%; /* Keep images circular */
+    width: 100%; /* Image width */
+    height: 100%; /* Image height */
+    border-radius: 50%; /* Circular images */
 }
+
+/* Arrow Controls */
+.slider-arrow {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.slider-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
 
 
 
