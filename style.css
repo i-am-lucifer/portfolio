@@ -683,3 +683,30 @@ footer {
     color: #777;
     font-size: 0.9rem;
 }
+
+/* Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    /* Hero Section Background */
+    .hero {
+        height: 400px; /* Reduce height for better mobile layout */
+        background-size: contain; /* Adjust background to fit within the section */
+        background-repeat: no-repeat; /* Prevent background repetition */
+        background-position: center; /* Keep the image centered */
+    }
+
+    /* Hero Content Styling */
+    .hero-content h1 {
+        font-size: 2rem; /* Adjust header size for readability */
+        margin-bottom: 15px; /* Reduce spacing below the header */
+    }
+
+    .hero-content p {
+        font-size: 1rem; /* Smaller text size for smaller screens */
+    }
+
+    .hero-content a.btn {
+        font-size: 0.9rem; /* Slightly smaller button text */
+        padding: 8px 15px; /* Adjust button padding */
+    }
+}
+
