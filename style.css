@@ -695,18 +695,33 @@ footer {
     }
 
     /* Hero Content Styling */
+    .hero-content {
+        position: absolute;
+        top: 55%; /* Adjust the vertical position for mobile */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%);
+        width: 90%; /* Restrict width for better alignment */
+        text-align: center; /* Center-align text */
+        padding: 10px; /* Add padding for spacing */
+        max-width: 300px; /* Ensure it fits smaller screens */
+    }
+
     .hero-content h1 {
-        font-size: 2rem; /* Adjust header size for readability */
-        margin-bottom: 15px; /* Reduce spacing below the header */
+        font-size: 1.8rem; /* Adjust header size for readability */
+        margin-bottom: 15px; /* Space below the header */
     }
 
     .hero-content p {
-        font-size: 1rem; /* Smaller text size for smaller screens */
+        font-size: 1rem; /* Smaller text size for better readability */
+        margin-bottom: 10px; /* Reduce space below text */
+        line-height: 1.4; /* Improve readability */
     }
 
     .hero-content a.btn {
         font-size: 0.9rem; /* Slightly smaller button text */
         padding: 8px 15px; /* Adjust button padding */
+        margin-top: 15px; /* Add space above the button */
     }
 }
+
 
