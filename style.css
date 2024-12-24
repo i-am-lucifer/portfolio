@@ -91,25 +91,26 @@
 /* About Image Slider */
 .about-image-slider {
     position: relative;
-    width: 300px; /* Set a fixed circular size */
-    height: 300px; /* Equal height for a circular shape */
+    width: 300px; /* Set the circular size */
+    height: 300px; /* Equal width and height for a circular slider */
     margin: 0 auto; /* Center the slider */
     overflow: hidden; /* Hide overflow for smooth transitions */
-    border-radius: 50%; /* Perfect circular effect */
+    border-radius: 50%; /* Circular shape */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .slider {
-    display: flex;
+    display: flex; /* Align images side-by-side */
     transition: transform 0.5s ease-in-out; /* Smooth transition */
     height: 100%; /* Matches the height of the slider container */
 }
 
 .slider img {
     flex-shrink: 0; /* Prevent images from shrinking */
-    object-fit: cover; /* Ensure images cover the container */
-    border-radius: 50%; /* Keep circular images */
+    object-fit: cover; /* Ensure images cover their space */
+    border-radius: 50%; /* Keep images circular */
 }
+
 
 
 
