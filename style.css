@@ -688,40 +688,41 @@ footer {
 @media (max-width: 768px) {
     /* Hero Section Background */
     .hero {
-        height: 400px; /* Reduce height for better mobile layout */
-        background-size: contain; /* Adjust background to fit within the section */
-        background-repeat: no-repeat; /* Prevent background repetition */
-        background-position: center; /* Keep the image centered */
+        height: 400px; /* Adjust height for mobile */
+        background-size: contain; /* Ensure the image fits within the section */
+        background-repeat: no-repeat; /* Prevent repetition */
+        background-position: center; /* Center the image */
     }
 
     /* Hero Content Styling */
     .hero-content {
         position: absolute;
-        top: 55%; /* Adjust the vertical position for mobile */
+        top: 48%; /* Adjust the vertical alignment */
         left: 50%; /* Center horizontally */
         transform: translate(-50%, -50%);
-        width: 90%; /* Restrict width for better alignment */
-        text-align: center; /* Center-align text */
+        width: 80%; /* Restrict width to ensure proper fit */
+        max-width: 300px; /* Maximum width for small screens */
+        text-align: center;
         padding: 10px; /* Add padding for spacing */
-        max-width: 300px; /* Ensure it fits smaller screens */
     }
 
     .hero-content h1 {
-        font-size: 1.8rem; /* Adjust header size for readability */
-        margin-bottom: 15px; /* Space below the header */
+        font-size: 1.8rem; /* Slightly smaller header size */
+        margin-bottom: 15px; /* Add space below the heading */
     }
 
     .hero-content p {
-        font-size: 1rem; /* Smaller text size for better readability */
-        margin-bottom: 10px; /* Reduce space below text */
-        line-height: 1.4; /* Improve readability */
+        font-size: 1rem; /* Adjust text size for readability */
+        line-height: 1.4; /* Adjust line spacing */
+        margin-bottom: 10px; /* Add space below the text */
     }
 
     .hero-content a.btn {
-        font-size: 0.9rem; /* Slightly smaller button text */
-        padding: 8px 15px; /* Adjust button padding */
-        margin-top: 15px; /* Add space above the button */
+        font-size: 0.9rem; /* Adjust button size */
+        padding: 10px 20px; /* Adjust padding for mobile screens */
+        margin-top: 15px; /* Space above the button */
     }
 }
+
 
 
