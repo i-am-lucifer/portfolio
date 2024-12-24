@@ -102,17 +102,15 @@
 .slider {
     display: flex;
     transition: transform 0.5s ease-in-out; /* Smooth transition */
-    width: 300%; /* Width is 100% times the number of images */
-    height: 100%; /* Ensures slider fills the container */
+    height: 100%; /* Matches the height of the slider container */
 }
 
 .slider img {
-    width: 300px; /* Ensure each image matches the slider size */
-    height: 300px; /* Ensure height matches for circular shape */
     flex-shrink: 0; /* Prevent images from shrinking */
-    border-radius: 50%; /* Make images circular */
-    object-fit: cover; /* Ensure images cover the area */
+    object-fit: cover; /* Ensure images cover the container */
+    border-radius: 50%; /* Keep circular images */
 }
+
 
 
 /* Projects Section */
