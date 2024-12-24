@@ -68,26 +68,46 @@
 /* About Section */
 .about-section {
     display: flex;
-    align-items: center; /* Vertically align text and image */
-    justify-content: space-between; /* Space out text and image */
+    align-items: center; /* Aligns the text and image vertically */
+    justify-content: space-between; /* Spaces out text and image */
     gap: 20px; /* Space between text and image */
     margin-top: 40px;
+    flex-wrap: nowrap; /* Ensures no wrapping */
 }
 
+/* Text Styling */
 .about-text {
-    flex: 1; /* Text takes up equal space */
-    text-align: left; /* Align text to the left */
+    flex: 1; /* Takes up half the available space */
+    text-align: left; /* Ensures text aligns to the left */
+    line-height: 1.8; /* Adds spacing between lines */
+    padding-right: 20px; /* Adds spacing between text and image */
 }
 
+/* Image Styling */
 .about-image {
-    flex: 1; /* Image takes up equal space */
-    text-align: center; /* Center the image inside its container */
+    flex: 1; /* Takes up half the available space */
+    text-align: center; /* Centers the image inside its container */
 }
 
 .about-image img {
-    width: 80%; /* Adjust size of the image */
-    max-width: 300px; /* Limit the maximum width */
-    border-radius: 50%; /* Make the image circular */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    width: 80%; /* Adjusts size of the image */
+    max-width: 300px; /* Ensures image doesn’t grow too large */
+    border-radius: 50%; /* Circular effect */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
 }
 
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column; /* Stacks the text and image vertically */
+        align-items: center; /* Centers content */
+        text-align: center; /* Centers text */
+    }
+
+    .about-text {
+        padding-right: 0; /* Removes extra padding */
+    }
+
+    .about-image img {
+        width: 60%; /* Adjusts image size for smaller screens */
+    }
+}
