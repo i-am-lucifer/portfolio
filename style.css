@@ -687,14 +687,13 @@ footer {
 /* Adjustments for Smaller Screens */
 @media (max-width: 768px) {
     /* Hero Section Background */
-     .hero {
-    background-size: 50%;
-    background-position: center;
-    height: 600px; /* Adjust height for better layout */
-    text-align: center;
-    position: relative;
-    background-color: #f0f0f0; /* Fallback color */
-}
+    .hero {
+        height: 500px; /* Increase the height for better spacing */
+        background-size: 100%; /* Make the laptop image larger */
+        background-repeat: no-repeat; /* Prevent repetition */
+        background-position: left right; /* Keep the image centered */
+    }
+
 
     /* Hero Content Styling */
     .hero-content {
