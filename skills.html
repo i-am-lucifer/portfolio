@@ -7,19 +7,60 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
     <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="projects.html">Projects</a>
-        <a href="skills.html">Skills</a>
-        <a href="contact.html">Contact</a>
+        <ul class="navbar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html" class="active">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
+
+    <!-- Skills Section -->
     <main class="container">
-        <section id="skills" class="card">
+        <section id="skills" class="skills-section">
             <h2>Skills</h2>
             <p>Showcasing my technical expertise in data analysis, visualization, machine learning, and tools like Tableau and Power BI.</p>
+            
+            <!-- Skills Grid -->
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <img src="icons/sql.png" alt="SQL Icon">
+                    <h3>SQL</h3>
+                    <p>Advanced proficiency in writing complex queries for data analysis, optimization, and database management.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="icons/tableau.png" alt="Tableau Icon">
+                    <h3>Tableau</h3>
+                    <p>Expert in creating interactive dashboards to drive business decisions and present insights effectively.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="icons/powerbi.png" alt="Power BI Icon">
+                    <h3>Power BI</h3>
+                    <p>Skilled in building dynamic reports and visualizations with advanced DAX capabilities.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="icons/python.png" alt="Python Icon">
+                    <h3>Python</h3>
+                    <p>Experience in data analysis, machine learning, and automation using Pandas, Scikit-learn, and TensorFlow.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="icons/ml.png" alt="Machine Learning Icon">
+                    <h3>Machine Learning</h3>
+                    <p>Proficiency in supervised and unsupervised learning, model evaluation, and deployment.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="icons/cloud.png" alt="Cloud Icon">
+                    <h3>Cloud Platforms</h3>
+                    <p>Hands-on experience with AWS and Azure for cloud computing and deployment.</p>
+                </div>
+            </div>
         </section>
     </main>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Logeshwaran Inbaraj. All rights reserved.</p>
     </footer>
