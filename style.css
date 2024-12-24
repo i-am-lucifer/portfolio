@@ -121,8 +121,9 @@
 .projects-grid {
     display: flex;
     justify-content: space-between; /* Equal spacing between tiles */
+    align-items: stretch; /* Ensures all tiles have equal height */
     gap: 20px; /* Space between project tiles */
-    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 .project-item {
@@ -131,29 +132,32 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     padding: 20px;
     text-align: left;
-    flex: 1; /* Ensures all tiles are equal width */
+    flex: 1; /* Ensures all tiles are of equal width */
     max-width: 300px; /* Limit tile width */
     display: flex;
-    flex-direction: column; /* Align content vertically */
+    flex-direction: column; /* Vertical alignment */
     justify-content: space-between; /* Distribute content evenly */
 }
 
 .project-item img {
-    width: 100%; /* Responsive image */
-    border-radius: 10px; /* Rounded corners */
-    margin-bottom: 15px;
+    width: 80px; /* Uniform size for all images */
+    height: 80px;
+    margin: 0 auto 15px; /* Center image and add spacing */
+    border-radius: 10px;
 }
 
 .project-content h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
     color: #333;
+    text-align: center; /* Align title in the center */
 }
 
 .project-content p {
     font-size: 0.9rem;
     line-height: 1.5;
     color: #555;
+    text-align: center; /* Align description in the center */
 }
 
 .project-content a.btn {
@@ -165,6 +169,7 @@
     text-decoration: none;
     border-radius: 5px;
     font-size: 0.9rem;
+    align-self: center; /* Center the button */
 }
 
 .project-content a.btn:hover {
