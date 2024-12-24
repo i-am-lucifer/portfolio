@@ -111,3 +111,45 @@
         width: 60%; /* Adjusts image size for smaller screens */
     }
 }
+
+/* Achievements Section */
+.achievements-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.achievements-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between items */
+    flex-wrap: wrap; /* Allows stacking on smaller screens */
+}
+
+.achievement-item {
+    background: #f9f9f9; /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    padding: 20px;
+    text-align: left;
+    flex: 1; /* Ensure equal width */
+    max-width: 300px; /* Limit item width */
+}
+
+.achievement-item img {
+    width: 100%; /* Makes the image responsive */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 15px;
+}
+
+.achievement-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.achievement-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+}
+
