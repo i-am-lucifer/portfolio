@@ -120,29 +120,30 @@
 
 .achievements-grid {
     display: flex;
-    justify-content: space-between;
-    gap: 20px; /* Space between items */
-    flex-wrap: wrap; /* Allows stacking on smaller screens */
+    justify-content: space-between; /* Ensures even spacing */
+    align-items: stretch; /* Aligns all cards to the same height */
+    gap: 20px; /* Space between cards */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 .achievement-item {
-    background: #f9f9f9; /* Light background for contrast */
+    background: #f9f9f9; /* Light background */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
     padding: 20px;
-    text-align: left;
-    flex: 1; /* Ensure equal width */
-    max-width: 300px; /* Limit item width */
+    text-align: center;
+    flex: 1; /* Ensures all cards have equal width */
+    max-width: 300px; /* Limit the card width */
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    justify-content: space-between; /* Distribute content evenly */
 }
 
 .achievement-item img {
-    width: 100%; /* Automatically adjust size based on container */
-    max-width: 150px; /* Limit the width to 150px */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Optional: Rounded corners */
-    margin: 0 auto; /* Center the image within the container */
+    width: 80px; /* Fixed size for consistent alignment */
+    height: 80px;
+    margin: 0 auto 15px; /* Center the image */
 }
-
 
 .achievement-content h3 {
     font-size: 1.2rem;
@@ -155,4 +156,5 @@
     line-height: 1.5;
     color: #555;
 }
+
 
