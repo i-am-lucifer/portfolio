@@ -689,7 +689,7 @@ footer {
     /* Hero Section Background */
     .hero {
         height: 450px; /* Slightly increase height for better fit */
-        background-size: 140%; /* Enlarge the image to fit text within the laptop screen */
+        background-size: 150%; /* Enlarge the image to fit text within the laptop screen */
         background-repeat: no-repeat; /* Prevent repetition */
         background-position: center; /* Align the laptop screen with the top-center */
     }
@@ -721,7 +721,7 @@ footer {
     .hero-content a.btn {
         font-size: 0.9rem; /* Adjust button size */
         padding: 10px 20px; /* Adjust padding for mobile screens */
-        margin-top: 15px; /* Space above the button */
+        margin-top: 30px; /* Space above the button */
     }
 }
 
