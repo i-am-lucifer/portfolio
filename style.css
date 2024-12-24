@@ -688,27 +688,27 @@ footer {
 @media (max-width: 768px) {
     /* Hero Section Background */
     .hero {
-        height: 400px; /* Adjust height for mobile */
-        background-size: contain; /* Ensure the image fits within the section */
+        height: 500px; /* Increase the height for better spacing */
+        background-size: 100%; /* Make the laptop image larger */
         background-repeat: no-repeat; /* Prevent repetition */
-        background-position: center; /* Center the image */
+        background-position: center; /* Keep the image centered */
     }
 
     /* Hero Content Styling */
     .hero-content {
         position: absolute;
-        top: 48%; /* Adjust the vertical alignment */
+        top: 50%; /* Center vertically */
         left: 50%; /* Center horizontally */
         transform: translate(-50%, -50%);
-        width: 80%; /* Restrict width to ensure proper fit */
-        max-width: 300px; /* Maximum width for small screens */
+        width: 85%; /* Restrict width for better alignment */
+        max-width: 350px; /* Ensure it fits comfortably */
         text-align: center;
         padding: 10px; /* Add padding for spacing */
     }
 
     .hero-content h1 {
-        font-size: 1.8rem; /* Slightly smaller header size */
-        margin-bottom: 15px; /* Add space below the heading */
+        font-size: 1.6rem; /* Slightly smaller header size */
+        margin-bottom: 10px; /* Add space below the header */
     }
 
     .hero-content p {
