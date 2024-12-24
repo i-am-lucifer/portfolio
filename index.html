@@ -174,41 +174,40 @@
 <script>
     let currentIndex = 0;
 
-    // Function to initialize the slider width
     function initializeSlider() {
         const slider = document.querySelector(".slider");
         const images = document.querySelectorAll(".slider img");
         const totalImages = images.length;
 
-        // Set the slider width dynamically based on the number of images
+        // Set the slider width to accommodate all images
         slider.style.width = `${totalImages * 100}%`;
 
-        // Set each image's width to match the slider container
+        // Set each image's width to fit within its portion of the slider
         images.forEach((image) => {
             image.style.width = `${100 / totalImages}%`;
         });
     }
 
-    // Function to slide images
     function slideImages() {
         const slider = document.querySelector(".slider");
         const images = document.querySelectorAll(".slider img");
         const totalImages = images.length;
 
-        // Calculate the new position
+        // Move to the next image
         currentIndex = (currentIndex + 1) % totalImages;
-        const offset = -currentIndex * 100;
 
-        // Apply the transform to the slider
+        // Apply the transform to slide to the next image
+        const offset = -currentIndex * 100;
         slider.style.transform = `translateX(${offset}%)`;
     }
 
     // Initialize the slider
     initializeSlider();
 
-    // Set the interval for sliding images
+    // Set up the interval for automatic sliding
     setInterval(slideImages, 3000); // Change every 3 seconds
 </script>
+
 
 
 
