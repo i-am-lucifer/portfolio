@@ -688,10 +688,10 @@ footer {
 @media (max-width: 768px) {
     /* Hero Section Background */
     .hero {
-        height: 500px; /* Increase the height for better spacing */
-        background-size: 100%; /* Make the laptop image larger */
+        height: 450px; /* Slightly increase height for better fit */
+        background-size: 130%; /* Enlarge the image to fit text within the laptop screen */
         background-repeat: no-repeat; /* Prevent repetition */
-        background-position: left right; /* Keep the image centered */
+        background-position: center top; /* Align the laptop screen with the top-center */
     }
 
 
