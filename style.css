@@ -22,30 +22,28 @@
     transform: translate(-50%, -50%);
     color: black;
     text-align: center;
-    padding: 10px;
 }
 
 .hero-content h1 {
-    font-size: 2rem; /* Adjusted font size */
-    margin-bottom: 10px;
+    font-size: 2.5rem; /* Adjusted font size */
     margin: 0;
     color: black;
 }
 
 .hero-content p {
     margin: 10px 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .hero-content a.btn {
     display: inline-block;
     margin: 20px 0 10px;
-    padding: 8px 15px;
+    padding: 10px 20px;
     background-color: #007bff;
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .hero-content a.btn:hover {
@@ -685,15 +683,3 @@ footer {
     color: #777;
     font-size: 0.9rem;
 }
-
-/* Adjust Background Image for Mobile Screens */
-@media (max-width: 768px) {
-    .hero {
-        height: 400px; /* Reduce height for smaller screens */
-        background-size: contain; /* Adjust the image to fit within the section */
-        background-repeat: no-repeat; /* Avoid repeating the image */
-    }
-}
-
-
-
