@@ -96,6 +96,30 @@
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
 }
 
+/* About Image Slider */
+.about-image-slider {
+    position: relative;
+    width: 100%; /* Adjust to fit the container */
+    max-width: 300px; /* Limit the width of the slider */
+    margin: 0 auto; /* Center the slider */
+    overflow: hidden; /* Hide overflow for smooth transitions */
+    border-radius: 50%; /* Circular effect */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+    width: 300%; /* Width is 100% times the number of images */
+}
+
+.slider img {
+    width: 100%; /* Ensure each image takes the full slider width */
+    flex-shrink: 0; /* Prevent images from shrinking */
+    border-radius: 50%; /* Circular images */
+}
+
+
 @media (max-width: 768px) {
     .about-section {
         flex-direction: column; /* Stacks the text and image vertically */
