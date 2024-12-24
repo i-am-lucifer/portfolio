@@ -7,21 +7,79 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
     <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="projects.html">Projects</a>
-        <a href="skills.html">Skills</a>
-        <a href="contact.html">Contact</a>
+        <ul class="navbar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
+
+    <!-- About Section -->
     <main class="container">
-        <section id="about" class="card">
-            <h2>About Me</h2>
-            <p>Welcome to my portfolio! This page will highlight my journey, experiences, and passion for data analytics and machine learning.</p>
+        <section id="about" class="about-section">
+            <div class="about-container">
+                <!-- Text Content -->
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>
+                        Hi, I'm <strong>Logeshwaran Inbaraj</strong>, a passionate <strong>Data Analyst</strong> and <strong>Machine Learning Specialist</strong> with over 5 years of experience turning complex data into actionable insights. My journey in data began with a love for problem-solving and storytelling through numbers.
+                    </p>
+                    <p>
+                        I recently completed my <strong>Master’s in Computing - Data Science</strong> at <strong>Dublin City University</strong>, where I developed advanced skills in data analytics, visualization, and machine learning.
+                    </p>
+                    <p>
+                        When I'm not exploring the world of data, you'll find me learning new technologies, enjoying good movies, or discovering hidden gems in Dublin.
+                    </p>
+                </div>
+
+                <!-- Slider Content -->
+                <div class="about-image-slider">
+                    <div class="slider">
+                        <img src="images/your-photo1.jpg" alt="Logeshwaran Inbaraj - Image 1">
+                        <img src="images/your-photo2.jpg" alt="Logeshwaran Inbaraj - Image 2">
+                        <img src="images/your-photo3.jpg" alt="Logeshwaran Inbaraj - Image 3">
+                    </div>
+                    <!-- Arrow Controls -->
+                    <button class="slider-arrow left-arrow" onclick="previousImage()">&#8249;</button>
+                    <button class="slider-arrow right-arrow" onclick="nextImage()">&#8250;</button>
+                </div>
+            </div>
         </section>
     </main>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Logeshwaran Inbaraj. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript for Slider -->
+    <script>
+        let currentIndex = 0;
+
+        function showImage(index) {
+            const slider = document.querySelector(".slider");
+            const images = document.querySelectorAll(".slider img");
+            const totalImages = images.length;
+
+            // Update index to loop properly
+            currentIndex = (index + totalImages) % totalImages;
+
+            // Move the slider to show the correct image
+            const offset = -currentIndex * 100;
+            slider.style.transform = `translateX(${offset}%)`;
+        }
+
+        function nextImage() {
+            showImage(currentIndex + 1);
+        }
+
+        function previousImage() {
+            showImage(currentIndex - 1);
+        }
+    </script>
 </body>
 </html>
