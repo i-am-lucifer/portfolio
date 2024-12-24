@@ -340,45 +340,106 @@ section {
 
 /* Navigation Bar */
 .navbar {
-    background-color: #007bff; /* Vibrant blue */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    padding: 10px 0; /* Vertical padding */
-    position: sticky; /* Sticky navigation bar */
-    top: 0; /* Stick to the top */
-    z-index: 10; /* Ensure it stays above other elements */
+    background-color: #007bff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
-.navbar-menu {
+.navbar-container {
     display: flex;
-    justify-content: center; /* Center-align the menu */
-    list-style: none; /* Remove bullet points */
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo */
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Navigation Menu */
+.navbar-menu {
+    list-style: none;
+    display: flex;
     margin: 0;
     padding: 0;
 }
 
 .navbar-menu li {
-    margin: 0 15px; /* Space between links */
+    margin: 0 15px;
 }
 
 .navbar-menu a {
-    color: white; /* White text */
-    text-decoration: none; /* Remove underline */
-    font-size: 1.1rem; /* Larger text */
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
     font-weight: bold;
-    padding: 10px 15px; /* Clickable padding */
-    border-radius: 5px; /* Rounded hover effect */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+    transition: color 0.3s ease;
 }
 
 .navbar-menu a:hover {
-    background-color: #ffdd57; /* Yellow hover */
-    color: #007bff; /* Blue text */
+    color: #ffdd57;
 }
 
-.navbar-menu a.active {
-    background-color: #ffdd57; /* Highlight for active page */
-    color: #007bff; /* Blue text */
+/* Hamburger Menu */
+.hamburger {
+    display: none; /* Hidden by default for larger screens */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 15;
 }
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: transform 0.3s ease;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        background-color: #007bff;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-menu.active {
+        display: flex; /* Display menu when active */
+    }
+
+    .navbar-menu li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger menu on smaller screens */
+    }
+}
+
+
+
 
 /* Contact Section */
 .contact-section {
