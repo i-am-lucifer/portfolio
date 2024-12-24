@@ -112,6 +112,66 @@
     }
 }
 
+/* Projects Section */
+.projects-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.projects-grid {
+    display: flex;
+    justify-content: space-between; /* Equal spacing between tiles */
+    gap: 20px; /* Space between project tiles */
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+.project-item {
+    background: #f9f9f9; /* Light background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    text-align: left;
+    flex: 1; /* Ensures all tiles are equal width */
+    max-width: 300px; /* Limit tile width */
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    justify-content: space-between; /* Distribute content evenly */
+}
+
+.project-item img {
+    width: 100%; /* Responsive image */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 15px;
+}
+
+.project-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.project-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+.project-content a.btn {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.project-content a.btn:hover {
+    background-color: #0056b3;
+}
+
+
 /* Achievements Section */
 .achievements-section {
     margin-top: 40px;
