@@ -1,3 +1,10 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Hero Section */
 .hero {
     background-size: cover;
@@ -5,9 +12,9 @@
     height: 600px; /* Adjust height for better layout */
     text-align: center;
     position: relative;
+    background-color: #f0f0f0; /* Fallback color */
 }
 
-/* Hero Content */
 .hero-content {
     position: absolute;
     top: 50%; /* Center vertically */
@@ -43,7 +50,6 @@
     background-color: #0056b3;
 }
 
-/* Social Icons Styling */
 .social-icons {
     margin-top: 20px; /* Space above icons */
     display: flex;
@@ -75,7 +81,6 @@
     flex-wrap: nowrap; /* Ensures no wrapping */
 }
 
-/* Text Styling */
 .about-text {
     flex: 1; /* Takes up half the available space */
     text-align: left; /* Ensures text aligns to the left */
@@ -83,20 +88,6 @@
     padding-right: 20px; /* Adds spacing between text and image */
 }
 
-/* Image Styling */
-.about-image {
-    flex: 1; /* Takes up half the available space */
-    text-align: center; /* Centers the image inside its container */
-}
-
-.about-image img {
-    width: 80%; /* Adjusts size of the image */
-    max-width: 300px; /* Ensures image doesn’t grow too large */
-    border-radius: 50%; /* Circular effect */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-}
-
-/* About Image Slider */
 .about-image-slider {
     position: relative;
     width: 100%; /* Adjust to fit the container */
@@ -105,6 +96,7 @@
     overflow: hidden; /* Hide overflow for smooth transitions */
     border-radius: 50%; /* Circular effect */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    min-height: 300px; /* Prevent layout shifts */
 }
 
 .slider {
@@ -117,23 +109,7 @@
     width: 100%; /* Ensure each image takes the full slider width */
     flex-shrink: 0; /* Prevent images from shrinking */
     border-radius: 50%; /* Circular images */
-}
-
-
-@media (max-width: 768px) {
-    .about-section {
-        flex-direction: column; /* Stacks the text and image vertically */
-        align-items: center; /* Centers content */
-        text-align: center; /* Centers text */
-    }
-
-    .about-text {
-        padding-right: 0; /* Removes extra padding */
-    }
-
-    .about-image img {
-        width: 60%; /* Adjusts image size for smaller screens */
-    }
+    cursor: pointer; /* Optional: Cursor pointer for interactivity */
 }
 
 /* Projects Section */
@@ -185,7 +161,7 @@
 }
 
 .project-content a.btn {
-    margin-top: 10px;
+    margin-top: auto; /* Ensures button stays at the bottom */
     display: inline-block;
     padding: 10px 15px;
     background-color: #007bff;
@@ -199,7 +175,6 @@
 .project-content a.btn:hover {
     background-color: #0056b3;
 }
-
 
 /* Achievements Section */
 .achievements-section {
@@ -246,4 +221,23 @@
     color: #555;
 }
 
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column; /* Stacks the text and image vertically */
+        align-items: center; /* Centers content */
+        text-align: center; /* Centers text */
+    }
 
+    .about-text {
+        padding-right: 0; /* Removes extra padding */
+    }
+
+    .projects-grid, .achievements-grid {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .project-item, .achievement-item {
+        max-width: 100%; /* Use full width */
+    }
+}
