@@ -88,29 +88,32 @@
     padding-right: 20px; /* Adds spacing between text and image */
 }
 
+/* About Image Slider */
 .about-image-slider {
     position: relative;
-    width: 100%; /* Adjust to fit the container */
-    max-width: 300px; /* Limit the width of the slider */
+    width: 300px; /* Set a fixed circular size */
+    height: 300px; /* Equal height for a circular shape */
     margin: 0 auto; /* Center the slider */
     overflow: hidden; /* Hide overflow for smooth transitions */
-    border-radius: 50%; /* Circular effect */
+    border-radius: 50%; /* Perfect circular effect */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    min-height: 300px; /* Prevent layout shifts */
 }
 
 .slider {
     display: flex;
     transition: transform 0.5s ease-in-out; /* Smooth transition */
     width: 300%; /* Width is 100% times the number of images */
+    height: 100%; /* Ensures slider fills the container */
 }
 
 .slider img {
-    width: 100%; /* Ensure each image takes the full slider width */
+    width: 300px; /* Ensure each image matches the slider size */
+    height: 300px; /* Ensure height matches for circular shape */
     flex-shrink: 0; /* Prevent images from shrinking */
-    border-radius: 50%; /* Circular images */
-    cursor: pointer; /* Optional: Cursor pointer for interactivity */
+    border-radius: 50%; /* Make images circular */
+    object-fit: cover; /* Ensure images cover the area */
 }
+
 
 /* Projects Section */
 .projects-section {
