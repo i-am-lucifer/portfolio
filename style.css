@@ -136,10 +136,13 @@
 }
 
 .achievement-item img {
-    width: 100%; /* Makes the image responsive */
-    border-radius: 10px; /* Rounded corners */
-    margin-bottom: 15px;
+    width: 100%; /* Automatically adjust size based on container */
+    max-width: 150px; /* Limit the width to 150px */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Rounded corners */
+    margin: 0 auto; /* Center the image within the container */
 }
+
 
 .achievement-content h3 {
     font-size: 1.2rem;
