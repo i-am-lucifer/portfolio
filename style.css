@@ -688,7 +688,7 @@ footer {
 @media (max-width: 768px) {
     /* Hero Section Background */
      .hero {
-    background-size: cover;
+    background-size: 50%;
     background-position: center;
     height: 600px; /* Adjust height for better layout */
     text-align: center;
