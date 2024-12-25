@@ -933,8 +933,6 @@ footer {
     }
 }
 
-/* Project Details Page Specific Styles */
-
 /* Section Styling */
 .card {
     background: #f9f9f9;
@@ -1012,36 +1010,28 @@ h2 {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Slider Container */
-.slider-container {
+/* Project Slider Specific Styling */
+.project-slider-container {
     position: relative;
     max-width: 600px; /* Set max width */
     height: auto; /* Dynamic height for image ratio */
     aspect-ratio: 16 / 9; /* Enforces rectangular ratio */
     margin: 20px auto; /* Centers the slider */
     overflow: hidden; /* Hides overflow for smooth transitions */
-    border-radius: 10px; /* Optional: Slightly rounded corners */
+    border-radius: 10px; /* Slightly rounded corners */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-/* Slider */
-.slider {
+.project-slider {
     display: flex; /* Aligns images horizontally */
     transition: transform 0.5s ease-in-out; /* Smooth sliding transition */
 }
 
-/* Slider Images */
-.slider-image {
+.project-slider-image {
     width: 100%; /* Full width of the container */
     height: auto; /* Matches the aspect ratio */
     object-fit: cover; /* Ensures the image fills the container */
-    display: none; /* Hide all images initially */
     border-radius: 0; /* Ensures no oval effect */
-}
-
-/* Display the first image */
-.slider-image:first-child {
-    display: block; /* Show the first image */
 }
 
 /* Arrow Controls */
@@ -1077,7 +1067,7 @@ h2 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .slider-container {
+    .project-slider-container {
         max-width: 100%; /* Full width for smaller screens */
         height: auto; /* Adjust height for mobile */
     }
@@ -1088,6 +1078,7 @@ h2 {
         height: 30px;
     }
 }
+
 
 
 
