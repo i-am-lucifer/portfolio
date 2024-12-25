@@ -725,11 +725,11 @@ footer {
     }
 }
 
-/* Projects Section */
+/* ========== Projects Section ========== */
 .projects-section {
     background: linear-gradient(to bottom, #ffffff, #f7f9fc); /* Subtle gradient */
     padding: 40px;
-    border-radius: 10px;
+    border-radius: 10px; /* Rounded corners */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     max-width: 1000px; /* Limit section width */
     margin: 40px auto; /* Center on the page */
@@ -748,7 +748,7 @@ footer {
     margin-bottom: 30px;
 }
 
-/* Projects Grid */
+/* ========== Projects Grid ========== */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
@@ -756,6 +756,7 @@ footer {
     margin-top: 20px;
 }
 
+/* ========== Project Card ========== */
 .project-card {
     background: #f9f9f9; /* Light background */
     border-radius: 10px; /* Rounded corners */
@@ -791,6 +792,7 @@ footer {
     margin-bottom: 15px;
 }
 
+/* Button Inside Project Card */
 .project-card a.btn {
     display: inline-block;
     padding: 10px 20px;
@@ -803,9 +805,10 @@ footer {
 }
 
 .project-card a.btn:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Darker blue on hover */
 }
 
+/* ========== Projects Link Button ========== */
 .projects-link {
     text-align: center;
     margin-top: 20px; /* Adds spacing above the button */
@@ -827,6 +830,36 @@ footer {
     background-color: #0056b3; /* Darker blue on hover */
 }
 
+/* ========== Project Details Page ========== */
+.project-details {
+    max-width: 1000px;
+    margin: 40px auto; /* Center the content */
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.project-details h1 {
+    font-size: 2rem;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project-details p, .project-details ul {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.project-details ul {
+    padding-left: 20px;
+    list-style: disc;
+}
+
+/* Project Image Styling */
 .project-image {
     width: 100%; /* Ensures the image scales properly */
     max-width: 600px; /* Sets a max width for larger screens */
@@ -835,6 +868,21 @@ footer {
     display: block;
     border-radius: 10px; /* Optional: Rounded corners */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-details h1 {
+        font-size: 1.8rem;
+    }
+
+    .project-details p, .project-details ul {
+        font-size: 0.9rem;
+    }
+
+    .project-image {
+        max-width: 100%; /* Use full width for smaller screens */
+    }
 }
 
 
