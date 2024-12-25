@@ -3,58 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Summarization of Lifelog Data - Project Details</title>
+    <title>Lifelog Summarization - Project Details</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
     <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
+        <button id="hamburger" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="navbar-menu" class="navbar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
+
+    <!-- Main Content -->
     <main class="container">
-        <section id="project-details">
-            <h1>Summarization of Lifelog Data Using LLMs</h1>
-            <p>
-                Developed a state-of-the-art solution leveraging large language models (LLMs) to summarize lifelog data 
-                for users, enabling easy extraction of meaningful insights from complex data logs.
+        <section id="project-details" class="card">
+            <!-- Title Section -->
+            <h1>Lifelog Summarization</h1>
+            <p class="intro-text">
+                An <strong>interactive Tableau dashboard</strong> analyzing sales trends and KPIs across regions, products, and time periods. 
+                This project showcases how <em>data visualization</em> can drive actionable insights and improve sales strategies.
             </p>
 
+            <!-- Problem Statement -->
             <h2>Problem Statement</h2>
-            <p>
-                Lifelog data, collected from various devices, contains large volumes of unstructured information. 
-                Users struggled to extract actionable insights efficiently.
+            <p class="problem-text">
+                Sales teams struggled to identify <strong>underperforming regions</strong> and products due to scattered data sources and manual reporting processes.
             </p>
 
+            <!-- Approach -->
             <h2>Approach</h2>
-            <ul>
-                <li>Preprocessed lifelog data using Python and NLP libraries for structured input.</li>
-                <li>Integrated OpenAI's GPT model for summarization and fine-tuned it for domain-specific tasks.</li>
-                <li>Designed a user-friendly interface to deliver concise daily and weekly summaries.</li>
+            <ul class="approach-list">
+                <li><strong>Interactive Tableau dashboard:</strong> Drill-down functionality for detailed analysis.</li>
+                <li><strong>Real-time data:</strong> Integrated SQL databases for accurate reporting.</li>
+                <li><strong>Custom filters:</strong> Enabled analysis by product categories, regions, and time periods.</li>
             </ul>
 
+            <!-- Results -->
             <h2>Results</h2>
-            <p>
-                The solution reduced manual effort by 80%, providing actionable insights to users in seconds. 
-                Achieved a BLEU score of 0.85 for summarization quality.
+            <p class="results-text">
+                The dashboard reduced analysis time by <strong>50%</strong>, enabling sales managers to focus on <strong>underperforming areas</strong>. 
+                This led to a <strong>10%</strong> increase in regional sales within the first quarter of implementation.
             </p>
 
+            <!-- Visualizations -->
             <h2>Visualizations</h2>
-            <img src="images/llm-summarization-dashboard.jpg" alt="LLM Summarization Dashboard">
-            <p><a href="#" target="_blank" class="btn">Explore Detailed Report</a></p>
+            <div class="visualization-section">
+                <img src="images/lifelog-summarization.png" alt="Sales Dashboard Screenshot" class="project-image">
+                <p>
+                    <a href="https://public.tableau.com/views/sales-dashboard" target="_blank" class="btn">Explore Live Dashboard</a>
+                </p>
+            </div>
         </section>
     </main>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Logeshwaran Inbaraj. All rights reserved.</p>
     </footer>
 
+    <!-- JavaScript for Hamburger Menu -->
     <script>
-    const hamburger = document.getElementById("hamburger");
-    const navbarMenu = document.getElementById("navbar-menu");
+        const hamburger = document.getElementById("hamburger");
+        const navbarMenu = document.getElementById("navbar-menu");
 
-    hamburger.addEventListener("click", () => {
-        navbarMenu.classList.toggle("active");
-    });
-</script>
+        hamburger.addEventListener("click", () => {
+            navbarMenu.classList.toggle("active");
+        });
+    </script>
 </body>
 </html>
