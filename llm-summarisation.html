@@ -25,41 +25,54 @@
     <main class="container">
         <section id="project-details" class="card">
             <!-- Title Section -->
-            <h1>Lifelog Summarization</h1>
+            <h1>Lifelog Summarization Using LLMs</h1>
             <p class="intro-text">
-                An <strong>interactive Tableau dashboard</strong> analyzing sales trends and KPIs across regions, products, and time periods. 
-                This project showcases how <em>data visualization</em> can drive actionable insights and improve sales strategies.
+                This project explores the <strong>summarization of lifelog data</strong> using various techniques, 
+                including <em>template-based methods, rule-based natural language generation (NLG), 
+                statistical machine learning models,</em> and <em>Large Language Models (LLMs).</em> The goal is to generate 
+                coherent, engaging, and personalized narratives from lifelog metadata.
             </p>
 
             <!-- Problem Statement -->
             <h2>Problem Statement</h2>
             <p class="problem-text">
-                Sales teams struggled to identify <strong>underperforming regions</strong> and products due to scattered data sources and manual reporting processes.
+                Lifelogging generates <strong>vast amounts of continuous, multi-modal data</strong>, making it 
+                challenging to create <strong>meaningful, accurate, and engaging narratives</strong>. Traditional methods like 
+                template-based story generation lack flexibility, while statistical models often miss nuanced understanding.
             </p>
 
             <!-- Approach -->
             <h2>Approach</h2>
             <ul class="approach-list">
-                <li><strong>Interactive Tableau dashboard:</strong> Drill-down functionality for detailed analysis.</li>
-                <li><strong>Real-time data:</strong> Integrated SQL databases for accurate reporting.</li>
-                <li><strong>Custom filters:</strong> Enabled analysis by product categories, regions, and time periods.</li>
+                <li><strong>Template-Based Generation:</strong> Used predefined templates to ensure structured summaries.</li>
+                <li><strong>Rule-Based NLG:</strong> Developed rules to highlight significant metrics and events.</li>
+                <li><strong>Statistical Models:</strong> Applied clustering and regression techniques for summarization.</li>
+                <li><strong>LLMs:</strong> Leveraged GPT-4 to generate coherent and engaging narratives based on metadata.</li>
             </ul>
 
             <!-- Results -->
             <h2>Results</h2>
             <p class="results-text">
-                The dashboard reduced analysis time by <strong>50%</strong>, enabling sales managers to focus on <strong>underperforming areas</strong>. 
-                This led to a <strong>10%</strong> increase in regional sales within the first quarter of implementation.
+                Among the methods, <strong>LLMs outperformed</strong> the others, providing the most accurate, coherent, and engaging 
+                summaries. The research demonstrated the potential of hybrid approaches for enhanced performance in lifelog summarization.
             </p>
 
-            <!-- Visualizations -->
+            <!-- Image Slider -->
             <h2>Visualizations</h2>
-            <div class="visualization-section">
-                <img src="images/lifelog-summarization.png" alt="Sales Dashboard Screenshot" class="project-image">
-                <p>
-                    <a href="https://public.tableau.com/views/sales-dashboard" target="_blank" class="btn">Explore Live Dashboard</a>
-                </p>
+            <div class="slider-container">
+                <button class="slider-arrow left-arrow" onclick="moveSlide(-1)">&#8249;</button>
+                <div class="slider">
+                    <img src="images/lifelog1.png" alt="Lifelog Visualization 1" class="slider-image">
+                    <img src="images/lifelog2.png" alt="Lifelog Visualization 2" class="slider-image">
+                    <img src="images/lifelog3.png" alt="Lifelog Visualization 3" class="slider-image">
+                    <img src="images/lifelog4.png" alt="Lifelog Visualization 4" class="slider-image">
+                    <img src="images/lifelog5.png" alt="Lifelog Visualization 5" class="slider-image">
+                </div>
+                <button class="slider-arrow right-arrow" onclick="moveSlide(1)">&#8250;</button>
             </div>
+            <p>
+                <a href="https://example.com/lifelog-llms" target="_blank" class="btn">Explore Full Report</a>
+            </p>
         </section>
     </main>
 
@@ -68,13 +81,20 @@
         <p>&copy; 2024 Logeshwaran Inbaraj. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript for Hamburger Menu -->
+    <!-- JavaScript for Slider -->
     <script>
-        const hamburger = document.getElementById("hamburger");
-        const navbarMenu = document.getElementById("navbar-menu");
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slider-image');
 
-        hamburger.addEventListener("click", () => {
-            navbarMenu.classList.toggle("active");
+        function moveSlide(direction) {
+            slides[currentSlide].style.display = 'none'; // Hide current slide
+            currentSlide = (currentSlide + direction + slides.length) % slides.length; // Calculate new index
+            slides[currentSlide].style.display = 'block'; // Show new slide
+        }
+
+        // Initialize slider: Hide all except the first image
+        slides.forEach((slide, index) => {
+            slide.style.display = index === 0 ? 'block' : 'none';
         });
     </script>
 </body>
