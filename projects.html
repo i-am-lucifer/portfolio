@@ -8,65 +8,51 @@
 </head>
 <body>
     <!-- Navigation Bar -->
-<nav class="navbar">
-    <div class="navbar-container">
-        <a href="index.html" class="logo">Portfolio</a>
-        <button class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul class="navbar-menu" id="navbar-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
-</nav>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
-
-    <!-- Projects Section -->
+    <!-- Main Content -->
     <main class="container">
-        <section id="projects" class="projects-section">
-            <h2>Projects</h2>
-
-            <p>This page is currently under maintenance.</p>
-
-            <!-- 
-            <p>Here are some of the key projects I’ve worked on, showcasing my skills in data analysis, machine learning, and visualization.</p>
-            -->
-            <!-- Projects Grid -->
-
-            <!-- 
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="images/project1.jpg" alt="Inventory Optimization">
-                    <h3>Inventory Optimization Framework</h3>
-                    <p>Developed a multi-echelon inventory optimization framework for a Fortune 500 client, reducing excess stock by 15%.</p>
-                    <a href="#" class="btn">Learn More</a>
-                </div>
-                <div class="project-card">
-                    <img src="images/project2.jpg" alt="Marketing Campaign Analysis">
-                    <h3>Marketing Campaign Analysis</h3>
-                    <p>Analyzed multi-channel marketing campaigns using Power BI, boosting ROI by 20% through targeted insights.</p>
-                    <a href="#" class="btn">Learn More</a>
-                </div>
-                <div class="project-card">
-                    <img src="images/project3.jpg" alt="Customer Churn Prediction">
-                    <h3>Customer Churn Prediction</h3>
-                    <p>Implemented machine learning models predicting churn with 85% accuracy, driving retention strategies.</p>
-                    <a href="#" class="btn">Learn More</a>
-                </div>
-                <div class="project-card">
-                    <img src="images/project4.jpg" alt="Financial Dashboard">
-                    <h3>Financial KPI Dashboard</h3>
-                    <p>Created an interactive Tableau dashboard to visualize revenue, expenses, and profit margins for better budgeting.</p>
-                    <a href="#" class="btn">Learn More</a>
-                </div>
-            </div>-->
+        <section id="projects" class="card projects-section">
+            <h2>My Projects</h2>
+            <p>Below are some of the exciting projects I've worked on, showcasing my skills in data analysis, visualization, and machine learning.</p>
             
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <img src="images/project1.jpg" alt="Project 1">
+                    <h3>Sales Dashboard</h3>
+                    <p>An interactive Tableau dashboard analyzing sales trends and KPIs across regions, products, and time periods.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <img src="images/project2.jpg" alt="Project 2">
+                    <h3>Customer Churn Prediction</h3>
+                    <p>Built a machine learning model to predict customer churn, achieving 85% accuracy using Python and scikit-learn.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <img src="images/project3.jpg" alt="Project 3">
+                    <h3>Marketing Campaign Analysis</h3>
+                    <p>Used Power BI to analyze marketing campaigns, optimizing ROI by identifying high-performing channels.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <img src="images/project4.jpg" alt="Project 4">
+                    <h3>Inventory Optimization</h3>
+                    <p>Developed a multi-echelon inventory optimization model, reducing excess inventory by 15% for a Fortune 500 client.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -74,14 +60,5 @@
     <footer>
         <p>&copy; 2024 Logeshwaran Inbaraj. All rights reserved.</p>
     </footer>
-    <script>
-    const hamburger = document.getElementById("hamburger");
-    const navbarMenu = document.getElementById("navbar-menu");
-
-    hamburger.addEventListener("click", () => {
-        navbarMenu.classList.toggle("active");
-    });
-</script>
-
 </body>
 </html>
