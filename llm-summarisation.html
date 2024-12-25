@@ -59,15 +59,18 @@
 
             <!-- Image Slider -->
             <h2>Visualizations</h2>
-            <div class="slider-container">
-                <button class="slider-arrow left-arrow" onclick="moveSlide(-1)">&#8249;</button>
-                <div class="slider">
-                    <img src="images/lifelog1.png" alt="Lifelog Visualization 1" class="slider-image">
-                    <img src="images/lifelog2.png" alt="Lifelog Visualization 2" class="slider-image">
-                    <img src="images/lifelog3.png" alt="Lifelog Visualization 3" class="slider-image">
-                </div>
-                <button class="slider-arrow right-arrow" onclick="moveSlide(1)">&#8250;</button>
+            <div class="project-slider-container">
+            <div class="project-slider">
+            <img src="images/lifelog1.png" alt="lifelog Screenshot 1" class="project-slider-image">
+            <img src="images/lifelog2.png" alt="lifelog Screenshot 2" class="project-slider-image">
+            <img src="images/lifelog3.png" alt="lifelog Screenshot 3" class="project-slider-image">
             </div>
+    <!-- Left Arrow -->
+            <button class="slider-arrow left-arrow" onclick="prevSlide()">&#8249;</button>
+    <!-- Right Arrow -->
+            <button class="slider-arrow right-arrow" onclick="nextSlide()">&#8250;</button>
+            </div>
+
             <p>
                 <a href="https://example.com/lifelog-llms" target="_blank" class="btn">Explore Full Report</a>
             </p>
@@ -82,18 +85,31 @@
     <!-- JavaScript for Slider -->
     <script>
         let currentSlide = 0;
-        const slides = document.querySelectorAll('.slider-image');
 
-        function moveSlide(direction) {
-            slides[currentSlide].style.display = 'none'; // Hide current slide
-            currentSlide = (currentSlide + direction + slides.length) % slides.length; // Calculate new index
-            slides[currentSlide].style.display = 'block'; // Show new slide
-        }
+function showSlide(index) {
+    const slides = document.querySelectorAll('.project-slider-image');
+    slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'block' : 'none';
+    });
+}
 
-        // Initialize slider: Hide all except the first image
-        slides.forEach((slide, index) => {
-            slide.style.display = index === 0 ? 'block' : 'none';
-        });
+function prevSlide() {
+    const slides = document.querySelectorAll('.project-slider-image');
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
+function nextSlide() {
+    const slides = document.querySelectorAll('.project-slider-image');
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+// Initialize the slider
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide(currentSlide);
+});
+
     </script>
 </body>
 </html>
