@@ -1015,34 +1015,37 @@ h2 {
 /* Slider Container */
 .slider-container {
     position: relative;
-    max-width: 600px; /* Adjust width as needed */
+    max-width: 600px; /* Set max width */
+    height: 400px; /* Set a fixed height for a square/rectangular look */
     margin: 20px auto; /* Centers the slider */
-    overflow: hidden; /* Hides overflow for smooth sliding */
-    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hides overflow for smooth transitions */
+    border-radius: 10px; /* Optional: Slightly rounded corners */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-/* Slider Images */
+/* Slider */
 .slider {
-    display: flex; /* Images aligned horizontally */
-    transition: transform 0.5s ease-in-out; /* Smooth transition */
+    display: flex; /* Aligns images horizontally */
+    transition: transform 0.5s ease-in-out; /* Smooth sliding transition */
 }
 
+/* Slider Images */
 .slider-image {
-    width: 100%; /* Ensures images fit the slider width */
-    display: none; /* Initially hides all images */
-    object-fit: cover; /* Ensures the image scales correctly */
+    width: 100%; /* Full width */
+    height: 100%; /* Matches the container's height */
+    object-fit: cover; /* Ensures the image fills the container */
+    display: none; /* Hide all images initially */
 }
 
 /* Display the first image */
 .slider-image:first-child {
-    display: block;
+    display: block; /* Show the first image */
 }
 
 /* Arrow Controls */
 .slider-arrow {
     position: absolute;
-    top: 50%; /* Centers vertically */
+    top: 50%; /* Center vertically */
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -1050,33 +1053,31 @@ h2 {
     font-size: 2rem;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: 50%; /* Keep arrows circular */
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    z-index: 2; /* Ensures arrows appear above images */
+    z-index: 2; /* Ensure arrows are above the slider */
 }
 
-/* Left Arrow */
 .left-arrow {
     left: 10px;
 }
 
-/* Right Arrow */
 .right-arrow {
     right: 10px;
 }
 
-/* Hover Effect on Arrows */
 .slider-arrow:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Responsive Adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
     .slider-container {
         max-width: 100%; /* Full width for smaller screens */
+        height: auto; /* Adjust height for mobile */
     }
 
     .slider-arrow {
@@ -1085,6 +1086,7 @@ h2 {
         height: 30px;
     }
 }
+
 
 
 
