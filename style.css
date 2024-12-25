@@ -806,5 +806,26 @@ footer {
     background-color: #0056b3;
 }
 
+.projects-link {
+    text-align: center;
+    margin-top: 20px; /* Adds spacing above the button */
+}
+
+.projects-link .btn-primary {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.projects-link .btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
 
 
