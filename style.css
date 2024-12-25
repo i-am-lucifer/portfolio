@@ -832,55 +832,103 @@ footer {
 
 /* ========== Project Details Page ========== */
 .project-details {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 40px auto; /* Center the content */
     padding: 20px;
     background: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    line-height: 1.8; /* Spacing between lines for better readability */
 }
 
+/* Headings Styling */
 .project-details h1 {
     font-size: 2rem;
     color: #007bff;
     text-align: center;
     margin-bottom: 20px;
+    text-transform: uppercase; /* Optional: Make headings uppercase */
+    letter-spacing: 1px; /* Add slight spacing between letters */
 }
 
-.project-details p, .project-details ul {
-    font-size: 1rem;
-    line-height: 1.6;
+.project-details h2 {
+    font-size: 1.5rem;
     color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff; /* Underline for emphasis */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Paragraphs and Lists Styling */
+.project-details p {
+    font-size: 1.1rem;
+    color: #555;
     margin-bottom: 20px;
+    line-height: 1.6;
 }
 
 .project-details ul {
     padding-left: 20px;
     list-style: disc;
+    color: #555;
+    margin-bottom: 20px;
 }
 
-/* Project Image Styling */
-.project-image {
-    width: 100%; /* Ensures the image scales properly */
-    max-width: 600px; /* Sets a max width for larger screens */
-    height: auto; /* Maintains the aspect ratio */
-    margin: 20px auto; /* Centers the image */
+.project-details ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Visualization Section */
+.visualization-section img {
+    width: 100%;
+    max-width: 600px;
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px auto; /* Center the image */
     display: block;
-    border-radius: 10px; /* Optional: Rounded corners */
+    border-radius: 10px; /* Rounded corners */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-/* Responsive Design */
+.visualization-section p {
+    text-align: center; /* Center-align the Explore button */
+}
+
+/* Button Styling */
+.visualization-section a.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.visualization-section a.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .project-details h1 {
         font-size: 1.8rem;
     }
 
-    .project-details p, .project-details ul {
-        font-size: 0.9rem;
+    .project-details h2 {
+        font-size: 1.3rem;
     }
 
-    .project-image {
+    .project-details p, .project-details ul li {
+        font-size: 1rem;
+    }
+
+    .visualization-section img {
         max-width: 100%; /* Use full width for smaller screens */
     }
 }
