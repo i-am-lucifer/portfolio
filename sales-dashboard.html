@@ -54,25 +54,68 @@
 
             <!-- Image Slider -->
             <h2>Visualizations</h2>
-            <!-- Visualizations -->
-            <h2>Visualizations</h2>
             <div class="project-slider-container">
-            <div class="project-slider">
-            <img src="images/sales_d1.png" alt="Sales Dashboard Screenshot 1" class="project-slider-image">
-            <img src="images/sales_d1.png" alt="Sales Dashboard Screenshot 1" class="project-slider-image">
-            <img src="images/sales_d1.png" alt="Sales Dashboard Screenshot 1" class="project-slider-image">
-            <img src="images/sales_d1.png" alt="Sales Dashboard Screenshot 1" class="project-slider-image">
-            <img src="images/sales_d1.png" alt="Sales Dashboard Screenshot 1" class="project-slider-image">
+                <div class="project-slider">
+                    <img src="images/sales_d1.png" alt="Sales Dashboard Screenshot 1" class="project-slider-image">
+                    <img src="images/sales_d2.png" alt="Sales Dashboard Screenshot 2" class="project-slider-image">
+                    <img src="images/sales_d3.png" alt="Sales Dashboard Screenshot 3" class="project-slider-image">
+                    <img src="images/sales_d4.png" alt="Sales Dashboard Screenshot 4" class="project-slider-image">
+                    <img src="images/sales_d5.png" alt="Sales Dashboard Screenshot 5" class="project-slider-image">
+                </div>
+                <!-- Left Arrow -->
+                <button class="slider-arrow left-arrow" onclick="prevSlide()">&#8249;</button>
+                <!-- Right Arrow -->
+                <button class="slider-arrow right-arrow" onclick="nextSlide()">&#8250;</button>
             </div>
-    <!-- Left Arrow -->
-    <button class="slider-arrow left-arrow" onclick="prevSlide()">&#8249;</button>
-    <!-- Right Arrow -->
-    <button class="slider-arrow right-arrow" onclick="nextSlide()">&#8250;</button>
+
+            <!-- Tableau Embed -->
+            <h2>Interactive Tableau Dashboard</h2>
+<div class="tableau-container">
+    <div class='tableauPlaceholder' id='viz1735340275603' style='position: relative'>
+        <noscript>
+            <a href='#'>
+                <img alt='Executive Overview' src='https://public.tableau.com/static/images/9Z/9ZHTY2YHX/1_rss.png' style='border: none' />
+            </a>
+        </noscript>
+        <object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='path' value='shared/9ZHTY2YHX' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image' value='https://public.tableau.com/static/images/9Z/9ZHTY2YHX/1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-GB' />
+            <param name='filter' value='publish=yes' />
+        </object>
+    </div>
+    <script type='text/javascript'>
+        var divElement = document.getElementById('viz1735340275603');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        if (divElement.offsetWidth > 800) {
+            vizElement.style.width = '1000px';
+            vizElement.style.height = '827px';
+        } else if (divElement.offsetWidth > 500) {
+            vizElement.style.width = '1000px';
+            vizElement.style.height = '827px';
+        } else {
+            vizElement.style.width = '100%';
+            vizElement.style.height = '1277px';
+        }
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
 </div>
 
-            <p>
-                <a href="https://public.tableau.com/views/sales-dashboard" target="_blank" class="btn">Explore Live Dashboard</a>
-            </p>
+
+
+            
+
+            
         </section>
     </main>
 
@@ -85,30 +128,29 @@
     <script>
         let currentSlide = 0;
 
-function showSlide(index) {
-    const slides = document.querySelectorAll('.project-slider-image');
-    slides.forEach((slide, i) => {
-        slide.style.display = i === index ? 'block' : 'none';
-    });
-}
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.project-slider-image');
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+        }
 
-function prevSlide() {
-    const slides = document.querySelectorAll('.project-slider-image');
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-}
+        function prevSlide() {
+            const slides = document.querySelectorAll('.project-slider-image');
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
 
-function nextSlide() {
-    const slides = document.querySelectorAll('.project-slider-image');
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-}
+        function nextSlide() {
+            const slides = document.querySelectorAll('.project-slider-image');
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
 
-// Initialize the slider
-document.addEventListener('DOMContentLoaded', () => {
-    showSlide(currentSlide);
-});
-
+        // Initialize the slider
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(currentSlide);
+        });
     </script>
 </body>
 </html>
