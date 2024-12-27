@@ -1088,6 +1088,14 @@ h2 {
     overflow: hidden; /* Ensures no content overflows */
 }
 
+.visualization-text {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
 
 
 
