@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicting Target Customers - Project Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <button id="hamburger" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="navbar-menu" class="navbar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section id="project-details" class="card">
+            <!-- Title Section -->
+            <h1>Predicting Target Customers</h1>
+            <p class="intro-text">
+                This project focuses on predicting <strong>customers likely to buy electronics</strong> using a retail dataset. The goal is to identify potential customers and optimize marketing strategies based on data-driven insights.
+            </p>
+
+            <!-- Problem Statement -->
+            <h2>Problem Statement</h2>
+            <p class="problem-text">
+                Businesses often struggle to identify <strong>target customers</strong> due to the lack of actionable insights from vast amounts of transactional and behavioral data. By leveraging machine learning techniques, this project aims to solve this problem efficiently.
+            </p>
+
+            <!-- Approach -->
+            <h2>Approach</h2>
+            <ul class="approach-list">
+                <li><strong>Data Cleaning:</strong> Processed and cleaned a dataset of 1 million rows, including handling missing values and nested columns.</li>
+                <li><strong>Feature Engineering:</strong> Created meaningful features like <em>engagement score, recency, and category frequencies</em> to improve prediction accuracy.</li>
+                <li><strong>Class Balancing:</strong> Addressed class imbalance using synthetic data generation techniques.</li>
+                <li><strong>Modeling:</strong> Applied Logistic Regression, Random Forest, and XGBoost to predict customer behavior.</li>
+                <li><strong>Evaluation:</strong> Used accuracy, precision, recall, and F1-score to assess model performance.</li>
+            </ul>
+
+            <!-- Results -->
+            <h2>Results</h2>
+            <p class="results-text">
+                The Logistic Regression model achieved a balanced performance with an <strong>accuracy of 67.9%</strong>, while Random Forest and XGBoost models performed exceptionally well on synthetic data but risked overfitting. Feature importance analysis highlighted <em>total spend</em>, <em>engagement score</em>, and <em>annual income</em> as the most influential factors.
+            </p>
+
+            <!-- Image Slider -->
+            <h2>Snapshots</h2>
+            <div class="project-slider-container">
+                <div class="project-slider">
+                    <img src="images/customer_project1.png" alt="Feature Engineering Snapshot" class="project-slider-image">
+                    <img src="images/customer_project2.png" alt="Model Performance Snapshot" class="project-slider-image">
+                </div>
+                <!-- Left Arrow -->
+                <button class="slider-arrow left-arrow" onclick="prevSlide()">&#8249;</button>
+                <!-- Right Arrow -->
+                <button class="slider-arrow right-arrow" onclick="nextSlide()">&#8250;</button>
+            </div>
+
+            <p>
+                <a href="folder/predicting_target_customers.pdf" target="_blank" class="btn">Read Full Report</a>
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Logeshwaran Inbaraj. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Slider -->
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.project-slider-image');
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        function prevSlide() {
+            const slides = document.querySelectorAll('.project-slider-image');
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function nextSlide() {
+            const slides = document.querySelectorAll('.project-slider-image');
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Initialize the slider
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>
