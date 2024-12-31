@@ -22,6 +22,10 @@
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    padding: 20px; /* Add some space inside the box */
+    border-radius: 10px; /* Optional: rounded corners */
+    display: inline-block; /* Shrink-wrap the box to the content */   
 }
 
 .hero-content h1 {
