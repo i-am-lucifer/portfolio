@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial KPI Dashboard - Project Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <button id="hamburger" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="navbar-menu" class="navbar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section id="project-details" class="card">
+            <!-- Title Section -->
+            <h1>Apple Stock Financial KPI Dashboard</h1>
+            <p class="intro-text">
+                This project showcases a <strong>Financial KPI Dashboard</strong> developed using <em>Tableau Public</em> to analyze Apple stock performance from 2019 to 2024. The dashboard includes insights derived from stock prices, moving averages, Bollinger Bands, volatility, and cumulative returns.
+            </p>
+
+            <!-- Problem Statement -->
+            <h2>Problem Statement</h2>
+            <p class="problem-text">
+                Financial analysts need an interactive and visually appealing way to track and evaluate the performance of stocks over time. This dashboard aims to provide actionable insights into stock trends and metrics, facilitating informed decision-making.
+            </p>
+
+            <!-- Approach -->
+            <h2>Approach</h2>
+            <ul class="approach-list">
+                <li><strong>Data Collection:</strong> Downloaded historical stock data for Apple from Yahoo Finance using Python and the yfinance library.</li>
+                <li><strong>Data Preparation:</strong> Processed data to calculate metrics such as moving averages, Bollinger Bands, daily returns, and cumulative returns.</li>
+                <li><strong>Visualization:</strong> Designed an interactive Tableau dashboard with annotations, tooltips, and filters for enhanced user experience.</li>
+                <li><strong>Insights:</strong> Highlighted key events, such as the impact of the COVID-19 pandemic on stock performance.</li>
+            </ul>
+
+            <!-- Results -->
+            <h2>Results</h2>
+            <p class="results-text">
+                The dashboard provides a comprehensive view of Apple stock performance over five years, enabling users to:
+                <ul>
+                    <li>Track stock trends with moving averages.</li>
+                    <li>Identify periods of high volatility.</li>
+                    <li>Analyze cumulative growth and returns over time.</li>
+                    <li>Gain insights into market behavior through Bollinger Bands and daily return distributions.</li>
+                </ul>
+            </p>
+
+            <!-- Image Slider -->
+            <h2>Snapshots</h2>
+            <div class="project-slider-container">
+                <div class="project-slider">
+                    <img src="images/financial_kpi1.png" alt="KPI Dashboard Screenshot 1" class="project-slider-image">
+                    <img src="images/financial_kpi2.png" alt="KPI Dashboard Screenshot 2" class="project-slider-image">
+                </div>
+                <!-- Left Arrow -->
+                <button class="slider-arrow left-arrow" onclick="prevSlide()">&#8249;</button>
+                <!-- Right Arrow -->
+                <button class="slider-arrow right-arrow" onclick="nextSlide()">&#8250;</button>
+            </div>
+
+            <p>
+                <a href="https://public.tableau.com/" target="_blank" class="btn">View Live Dashboard</a>
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Logeshwaran Inbaraj. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Slider -->
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.project-slider-image');
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        function prevSlide() {
+            const slides = document.querySelectorAll('.project-slider-image');
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function nextSlide() {
+            const slides = document.querySelectorAll('.project-slider-image');
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Initialize the slider
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>
