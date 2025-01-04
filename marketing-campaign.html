@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifelog Summarization - Project Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <button id="hamburger" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="navbar-menu" class="navbar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section id="project-details" class="card">
+            <!-- Title Section -->
+            <h1>Marketing Campaign Insights</h1>
+            <p class="intro-text">
+                This page is under maintenance.
+            </p>
+
+            
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Logeshwaran Inbaraj. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Slider -->
+    <script>
+        let currentSlide = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.project-slider-image');
+    slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'block' : 'none';
+    });
+}
+
+function prevSlide() {
+    const slides = document.querySelectorAll('.project-slider-image');
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
+function nextSlide() {
+    const slides = document.querySelectorAll('.project-slider-image');
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+// Initialize the slider
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide(currentSlide);
+});
+
+    </script>
+</body>
+</html>
 
